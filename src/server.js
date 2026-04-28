@@ -1,9 +1,10 @@
 import {dbConnection} from "./config/database.js";
 import dotenv from 'dotenv';
-import app from "express/lib/application.js";
+import express from 'express';
 import {syncModels} from "./model/index.js";
 
 dotenv.config();
+const app = express();
 
 const startServer = async () => {
     await dbConnection();
